@@ -1,6 +1,6 @@
-pip install soynlp emoji
+!pip install soynlp emoji
 
-pip install transformers
+!pip install transformers
 
 from google.colab import drive
 drive.mount('/content/drive')
@@ -67,7 +67,7 @@ from torch import nn
 model = AutoModel.from_pretrained("beomi/KcELECTRA-base", num_labels=363)
 model = model.to(device)
 
-pip install emoji==1.7
+!pip install emoji==1.7
 
 import re
 import emoji
@@ -87,7 +87,7 @@ def clean(x):
 
 #epochs 수정
 batch_size = 32
-epochs = 
+epochs = 2
 
 optimizer = AdamW(model.parameters(), lr=3e-5)
 train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size, num_workers=5, shuffle=True)
